@@ -1,0 +1,298 @@
+/*================== Firefox-Dark-Colored-And-Rounded-Theme ==================
+Author: github.com/LeventeStancz
+*/
+
+/*================ GLOBAL COLORS ================*/
+:root {
+  --accent-color: 214, 233, 250;
+  --light-color: 255, 255, 255;
+  --dark-color: 32, 32, 32;
+  --orange-color: 214, 130, 50;
+}
+
+/*================== MAIN HEADER ==================*/
+toolbox#navigator-toolbox {
+  border: 0 !important;
+}
+
+/*================== TABS BAR ==================*/
+.tabbrowser-tab:not([selected]) {
+  min-width: 42px !important;
+  width: min-content !important;
+  max-width: 160px !important;
+}
+
+.tabbrowser-tab[selected] {
+  min-width: 42px !important;
+  width: min-content !important;
+  max-width: 270px !important;
+}
+
+.tab-icon-overlay {
+  &:not([crashed]) {
+    &[soundplaying] {
+      height: 18px !important;
+      width: 18px !important;
+    }
+  }
+}
+
+.tab-icon-image {
+  height: 18px !important;
+  width: 18px !important;
+}
+
+#titlebar #TabsToolbar {
+  padding-top: 4px !important;
+  padding-bottom: 0px !important;
+  background: rgba(var(--dark-color), 1) !important;
+}
+
+.tabbrowser-tab {
+  margin-right: 5px !important;
+}
+
+tab[selected="true"] .tab-content {
+  color: rgba(var(--light-color), 1) !important;
+}
+tab:not[selected="true"] .tab-content {
+  color: rgba(var(--light-color), 1) !important;
+}
+
+tab[selected="true"] .tab-background {
+  background: rgba(var(--dark-color), 1) !important;
+}
+
+tab:not[selected="true"] .tab-background {
+  background: rgba(var(--dark-color), 1) !important;
+}
+
+.tab-close-button {
+  color: rgba(255, 100, 100, 1) !important;
+  border-radius: 30px !important;
+}
+
+.tab-close-button:hover {
+  background-color: rgba(255, 100, 100, 1) !important;
+  fill-opacity: 1 !important;
+  color: rgba(var(--dark-color), 1) !important;
+}
+
+.tabbrowser-tab > .tab-stack > .tab-background {
+  color: rgba(var(--light-color), 1) !important;
+  border-radius: 22px !important;
+  background-color: rgba(var(--light-color), 0.2) !important;
+  outline: 2px;
+  outline-color: rgba(var(--orange-color), 1) !important;
+}
+
+.tabbrowser-tab
+  > .tab-stack
+  > .tab-background:not([selected="true"], [selected=""]) {
+  background-color: rgba(var(--light-color), 0.1) !important;
+}
+
+.tabbrowser-tab:hover
+  > .tab-stack
+  > .tab-background:not([selected="true"], [selected=""]) {
+  background-color: rgba(var(--light-color), 0.3) !important;
+}
+
+/*================== BOOKMARKS TOOLBAR ==================*/
+#PersonalToolbar {
+  background: rgba(var(--dark-color), 1) !important;
+  color: rgba(var(--light-color), 0.9) !important;
+  padding-bottom: 6px !important;
+  padding-top: 2px !important;
+}
+
+toolbarbutton.bookmark-item {
+  padding: 2px 4px !important;
+  border-radius: 10px !important;
+}
+
+toolbarbutton.bookmark-item .toolbarbutton-icon {
+  fill: rgba(var(--light-color), 0.9) !important;
+}
+
+#PlacesToolbar toolbarseparator {
+  -moz-appearance: none !important;
+  width: 1px;
+  margin: 0 8px !important;
+  background-color: rgba(var(--dark-color), 1) !important;
+  padding-inline: 0px !important;
+}
+
+/*================== CAPTION BUTTONS ==================*/
+.titlebar-button > .toolbarbutton-icon,
+#window-controls > toolbarbutton > .toolbarbutton-icon {
+  height: 14px !important;
+  width: 14px !important;
+}
+
+.titlebar-button:hover.titlebar-min > .toolbarbutton-icon {
+  color: rgba(230, 230, 60, 1) !important;
+}
+
+.titlebar-button:hover.titlebar-restore > .toolbarbutton-icon {
+  color: rgba(100, 230, 60, 1) !important;
+}
+
+.titlebar-button:hover.titlebar-max > .toolbarbutton-icon {
+  color: rgba(100, 230, 60, 1) !important;
+}
+
+/*================== NEW TAB BUTTON ==================*/
+toolbar
+  #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(
+    :active
+  )
+  > .toolbarbutton-icon,
+toolbar
+  #tabs-newtab-button:not([disabled="true"]):-moz-any(
+    [open],
+    [checked],
+    :hover:active
+  )
+  > .toolbarbutton-icon,
+toolbar
+  #tabs-newtab-button:not([disabled="true"]):-moz-any(
+    [open],
+    [checked],
+    :active
+  )
+  > .toolbarbutton-icon {
+  color: rgba(var(--light-color), 1) !important;
+  border-radius: 20px !important;
+  background-color: rgba(var(--light-color), 0.1) !important;
+}
+toolbar
+  #tabs-newtab-button:not([disabled="true"]):not([checked]):not([open]):not(
+    :active
+  ):hover
+  > .toolbarbutton-icon {
+  background-color: rgba(var(--light-color), 0.3) !important;
+}
+
+/*================== NAV BAR ==================*/
+toolbar#nav-bar {
+  background-color: rgba(var(--dark-color), 1) !important;
+  box-shadow: none !important;
+  padding-bottom: 4px !important;
+  padding-top: 0px !important;
+}
+
+toolbar#nav-bar toolbarbutton .toolbarbutton-icon,
+toolbar#nav-bar toolbarbutton #fxa-avatar-image {
+  color: rgba(var(--light-color), 0.9) !important;
+}
+
+#urlbar > #urlbar-background {
+  border-radius: 20px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background-color: rgba(var(--light-color), 0.2) !important;
+}
+
+#urlbar[open="true"],
+[open=""] {
+  border-radius: 20px !important;
+  border: 0 !important;
+  background-color: rgba(var(--dark-color), 1) !important;
+}
+
+#urlbar:not([focused="true"]) > #urlbar-background,
+#urlbar > #urlbar-input-container {
+  border-radius: 20px !important;
+  color: rgba(var(--light-color), 1) !important;
+}
+
+#PersonalToolbar
+  .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(
+    :active
+  ):hover,
+.tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(
+    scrollbutton-up
+  ):hover,
+.tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(
+    scrollbutton-down
+  ):hover,
+.findbar-button:not(:-moz-any([checked="true"], [disabled="true"])):hover,
+toolbarbutton.bookmark-item:not(.subviewbutton):hover:not(
+    [disabled="true"]
+  ):not([open]),
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(
+    :active
+  ):hover
+  > .toolbarbutton-icon,
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(
+    :active
+  ):hover
+  > .toolbarbutton-text,
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):not([checked]):not([open]):not(
+    :active
+  ):hover
+  > .toolbarbutton-badge-stack {
+  background-color: rgba(var(--light-color), 0.3) !important;
+}
+
+#PersonalToolbar
+  .toolbarbutton-1:not([disabled="true"]):-moz-any(
+    [open],
+    [checked],
+    :hover:active
+  ),
+.findbar-button:not([disabled="true"]):-moz-any(
+    [checked="true"],
+    :hover:active
+  ),
+toolbarbutton.bookmark-item:not(.subviewbutton):hover:active:not(
+    [disabled="true"]
+  ),
+toolbarbutton.bookmark-item[open="true"],
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):-moz-any(
+    [open],
+    [checked],
+    :hover:active
+  )
+  > .toolbarbutton-icon,
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):-moz-any(
+    [open],
+    [checked],
+    :hover:active
+  )
+  > .toolbarbutton-text,
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):-moz-any(
+    [open],
+    [checked],
+    :hover:active
+  )
+  > .toolbarbutton-badge-stack {
+  background-color: rgba(var(--light-color), 0.4) !important;
+}
+
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+  background-color: transparent !important;
+}
+
+#urlbar {
+  color: rgba(var(--light-color), 1) !important;
+}
+
+.urlbarView-url {
+  color: rgba(var(--light-color), 1) !important;
+}
+
+#PlacesChevron,
+#nav-bar-overflow-button {
+  border-radius: 4px !important;
+  width: 24px !important;
+  height: 24px !important;
+  vertical-align: middle !important;
+}
